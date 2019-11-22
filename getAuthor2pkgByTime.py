@@ -18,7 +18,7 @@ for author, values in author2pkgs.items():
     # get the trace of pkg use
     trace = [value[1] for value in values]
     # detect case 1, if is coherent always
-    if len(set(trace)) == 1 and ',' not in set(trace)[0]:
+    if len(set(trace)) == 1 and ',' not in trace[0]:
         print(author + ';' + 'case 1;' + values[0][1])
         continue
     # detect case 2
