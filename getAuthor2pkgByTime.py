@@ -14,7 +14,7 @@ for line in sys.stdin:
 
 # Let's parse each author
 # Regarding cases, please refer to ReadMe.md
-for author, values in author2pkgs:
+for author, values in author2pkgs.items():
     # get the trace of pkg use
     trace = [value[1] for value in values]
     # detect case 1, if is coherent always
