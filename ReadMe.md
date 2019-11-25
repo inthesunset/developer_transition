@@ -9,7 +9,7 @@
    *Further investigation result 2:*  
 
    **frameworks and the corresponding author num**
-   |framework|# author ids|
+   |framework|\# author ids|
    |:---:|:---:|
    |react|1195016|
    |angular|848227|
@@ -17,7 +17,7 @@
    |vue|379739|
 
    **num of frameworks used per developer**
-   | # frameworks used | # author ids |
+   | \# frameworks used | \# author ids |
    |:---:|:---:|
    |1|1779290|
    |2|305578|
@@ -25,7 +25,7 @@
    |4|6264|
 
    **Possible combinations of frameworks**
-   |react|angular|ember|vue|# author ids|
+   |react|angular|ember|vue|\# author ids|
    |:---:|:---:|:---:|:---:|:---:|
    |1|0|0|0|938301|
    |0|1|0|0|568515|
