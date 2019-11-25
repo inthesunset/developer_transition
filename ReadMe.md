@@ -7,13 +7,8 @@
    Extracted out **2143446** unique author ids for **3149813** unique projects.  
 
    *Further investigation result 2:*  
-   | # frameworks used | # author ids |
-   |:---:|:---:|
-   |1|1779290|
-   |2|305578|
-   |3|52366|
-   |4|6264|
 
+   **frameworks and the corresponding author #**
    |framework|# author ids|
    |:---:|:---:|
    |react|1195016|
@@ -21,28 +16,37 @@
    |ember|149618|
    |vue|379739|
 
-   |Possible combinations of frameworks|react|angular|ember|vue|# author ids|
-   |:---:|:---:|:---:|:---:|:---:|:---:|
-   ||1|0|0|0|938301|
-   ||1|1|0|0|118480|
-   ||1|0|1|0|5989|
-   ||1|0|0|1|77579|
-   ||1|1|1|0|30836|
-   ||1|1|0|1|16969|
-   ||1|0|1|1|598|
-   ||1|1|1|1|6264|
-   ||0|1|0|0|568515|
-   ||0|1|1|0|86115|
-   ||0|1|0|1|17085|
-   ||0|1|1|1|3963|
-   ||0|0|1|0|15523|
-   ||0|0|1|1|330|
-   ||0|0|0|1|256951|
+   **#frameworks used per developer**
+   | # frameworks used | # author ids |
+   |:---:|:---:|
+   |1|1779290|
+   |2|305578|
+   |3|52366|
+   |4|6264|
+
+   **Possible combinations of frameworks**
+   |react|angular|ember|vue|# author ids|
+   |:---:|:---:|:---:|:---:|:---:|
+   |1|0|0|0|938301|
+   |0|1|0|0|568515|
+   |0|0|0|1|256951|
+   |1|1|0|0|118480|
+   |0|1|1|0|86115|
+   |1|0|0|1|77579|
+   |1|1|1|0|30836|
+   |0|1|0|1|17085|
+   |1|1|0|1|16969|
+   |0|0|1|0|15523|
+   |1|1|1|1|6264|
+   |1|0|1|0|5989|
+   |0|1|1|1|3963|
+   |1|0|1|1|598|
+   |0|0|1|1|330|
+
 
    *conclusions:*  
-   react + angular, angular + ember, react + vue, react + ember + angular are comparatively more popular.  
-   If sort all possible combinations, the order: react < angular <  vue < react + angular < angular + ember < react + vue < react + angular + ember < angular + vue < react + angular + vue < ember < all 4 < react + ember < angular + ember + vue < react + ember + vue < ember + vue  
-   
+   react + angular, angular + ember, react + vue, react + ember + angular are comparatively more popular.   
+
 2. *step 2:*  
    RQ1: Does developer transfer from one framework to another?
    1. create author 2 pkgs by time
