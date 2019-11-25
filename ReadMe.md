@@ -2,15 +2,47 @@
 
 ### STEPS and Results
 1. *step 1:*  
-   Filtered out developers who used at least one of the 4 frameworks based on b2cPtaPKGJJS  
+   Filtered out developers who used at least one of the 4 frameworks based on c2bPtaPKGPJS.{0..31}.gz  
    *result 1:*  
-   Extracted out **411257** unique author ids for total **2607851** use cases(blobs), and **491844** unique projects.  
+   Extracted out **2143446** unique author ids for **3149813** unique projects.  
+
    *Further investigation result 2:*  
-   StandAlone case( use only one framework) **v.s.** Multi:  
-     Among all use cases, (Framework:#) => angular:  811339, ember: 30095, react: 1629007, vue: 160679  
-     StandAlone: angular: 794668, ember: 24276, react: 1612833, vue: 154004  
-   *conclusion:*  
-   The majority only use one framework.
+   | # frameworks used | # author ids |
+   |:---:|:---:|
+   |1|1779290|
+   |2|305578|
+   |3|52366|
+   |4|6264|
+
+   |framework|# author ids|
+   |:---:|:---:|
+   |react|1195016|
+   |angular|848227|
+   |ember|149618|
+   |vue|379739|
+
+   |Possible combinations of frameworks|react|angular|ember|vue|# author ids|
+   |:---:|:---:|:---:|:---:|:---:|:---:|
+   ||1|0|0|0|938301|
+   ||1|1|0|0|118480|
+   ||1|0|1|0|5989|
+   ||1|0|0|1|77579|
+   ||1|1|1|0|30836|
+   ||1|1|0|1|16969|
+   ||1|0|1|1|598|
+   ||1|1|1|1|6264|
+   ||0|1|0|0|568515|
+   ||0|1|1|0|86115|
+   ||0|1|0|1|17085|
+   ||0|1|1|1|3963|
+   ||0|0|1|0|15523|
+   ||0|0|1|1|330|
+   ||0|0|0|1|256951|
+
+   *conclusions:*  
+   react + angular, angular + ember, react + vue, react + ember + angular are comparatively more popular.  
+   If sort all possible combinations, the order: react < angular <  vue < react + angular < angular + ember < react + vue < react + angular + ember < angular + vue < react + angular + vue < ember < all 4 < react + ember < angular + ember + vue < react + ember + vue < ember + vue  
+   
 2. *step 2:*  
    RQ1: Does developer transfer from one framework to another?
    1. create author 2 pkgs by time
