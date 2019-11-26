@@ -62,4 +62,4 @@ for author, commits in author2commit2others.items():
 print('author id; time (sorted); react commit #; angular commit #; total releant commits #')
 for author, timelines in author2timeline.items():
     for timepoint in sorted(timelines.keys()):
-        print(author + ';' + timepoint + ';' + ','.join(author2timeline[author][timepoint]))
+        print(author + ';' + timepoint + ';' + ','.join(map(str, author2timeline[author][timepoint])))
