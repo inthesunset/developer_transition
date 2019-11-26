@@ -1,7 +1,8 @@
 # Investigate developers transition among 4 JS web-end frameworks (angular, ember, react, vue) based on importing framework related packages
 
 ### STEPS and Results
-1. *step 1:*  
+1. **RQ1:** How are the usages of the four frameworks?
+   *step 1:*  
    Filtered out developers who used at least one of the 4 frameworks based on c2bPtaPKGPJS.{0..31}.gz  
    *result 1:*  
    Extracted out **2143446** unique author ids for **3149813** unique projects.  
@@ -27,7 +28,7 @@
    |4|6264|
 
    **Possible combinations of frameworks**  
-   
+
    |react|angular|ember|vue|\# author ids|
    |:---:|:---:|:---:|:---:|:---:|
    |1|0|0|0|938301|
@@ -46,10 +47,27 @@
    |1|0|1|1|598|
    |0|0|1|1|330|
 
+   **single framework usage ratio among all its cases**
+
+   |framework|percentage(%)|
+   |:---:|:---:|
+   |react|78.5|
+   |angular|67.0|
+   |ember|10.4|
+   |vue|67.7|
 
    *conclusions:*  
-   react + angular, angular + ember, react + vue, react + ember + angular are comparatively more popular.   
+   Developers are more likely to use single framework than using multiple ones, except for ember users.
 
+2. **RQ2:** Did we see migration happen? If yes, give one example.
+   *step 2:*  
+   We are more interested in authors that used multiple frameworks, where migration might appear.
+   I selected author ids that used *react* and *angular* exclusively, given that we have more use cases and react is comparatively new so we would be more likely to find migrations.
+   1. filter out data for react + angular
+   2. cluster based on author id, check the timeline of commits(that make changes to file where such pkg was imported), plot density of commits within study period, if one drop while the other increase, indicating a migration might happened. (rough version, )
+
+
+<!---
 2. *step 2:*  
    RQ1: Does developer transfer from one framework to another?
    1. create author 2 pkgs by time
@@ -73,3 +91,4 @@
     - **multiple frameworks involved in single blob:** => 5753
 4. *step 4:*  
    RQ3: Maybe like what are reasons? (qualitative study?)
+--->
