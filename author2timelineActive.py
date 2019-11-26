@@ -27,8 +27,7 @@ for line in sys.stdin:
         else:
             current = author2commit2others[author][commit]
             current_frameworks = current.split(',')[1:]
-            author2commit2others[author][commit] = time+',' +
-                ','.join(list(set(current_frameworks + frameworks)))
+            author2commit2others[author][commit] = time + ',' + ','.join(list(set(current_frameworks + frameworks)))
 
 # if you want clean author,commit,time,frameworks, please dump author2commit2others
 
