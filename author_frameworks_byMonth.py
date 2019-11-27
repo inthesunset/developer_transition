@@ -23,7 +23,7 @@ for line in sys.stdin:
 
 # leave the gap empty
 # dump data
-for author, months in author2month:
+for author, months in author2month.items():
     s = sorted(list(months.keys()))
     for month in s:
         print(author+';'+month+';'+','.join(map(str, months[s])))
