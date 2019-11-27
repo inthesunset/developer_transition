@@ -26,4 +26,4 @@ for line in sys.stdin:
 for author, months in author2month.items():
     s = sorted(list(months.keys()))
     for month in s:
-        print(author+';'+month+';'+','.join(map(str, months[s])))
+        print(author+';'+s+';'+','.join(map(str, months[s])))
