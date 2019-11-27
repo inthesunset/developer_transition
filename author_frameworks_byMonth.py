@@ -12,7 +12,7 @@ with open(targeted_authorFile, 'r') as f:
 
 author2month = defaultdict(dict)
 for line in sys.stdin:
-    items = line.strip()
+    items = line.strip().split(';')
     author = items[0]
     if author in  targeted_author:
         unixtime = items[1]

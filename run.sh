@@ -11,4 +11,4 @@ cat 4frameworks.c2PtabPKG.{0..31} | python /home/yma28/developer_transition/auth
 # 5. get basic statistics of # commits distribution of these authors, and selected top 10% of authors
 cat author.time.react.angular.commits | cut -d\; -f1 | python /home/yma28/developer_transition/prefilter_authors_with_intensive_commits.py > 10percentauthors.react.angular
 # 6. get the result by month for top 10% authors
-tail -n+2 author.time.react.angular.commits | python 10percentauthors.react.angular > 10percentByMonth.react.angular
+tail -n+2 author.time.react.angular.commits | python /home/yma28/developer_transition/author_frameworks_byMonth.py 10percentauthors.react.angular > 10percentByMonth.react.angular
