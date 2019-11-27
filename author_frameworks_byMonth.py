@@ -16,7 +16,7 @@ for line in sys.stdin:
     author = items[0]
     if author in  targeted_author:
         unixtime = items[1]
-        react, angular, commit_num = items[3].split(',')
+        react, angular, commit_num = items[2].split(',')
         month = datetime.utcfromtimestamp(unixtime).strftime('%Y%m')
         current_num = author2month[author].get(month, [0, 0])
         author2month[author][month] = [sum for i in zip(current_num, [int(react), int(angular)])]
