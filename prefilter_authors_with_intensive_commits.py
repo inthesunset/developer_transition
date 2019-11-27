@@ -1,5 +1,5 @@
 import sys
-import numpy as np
+#import numpy as np
 #from statistics import mean, median, stdev, only works on python3, drop it.
 from collections import defaultdict
 # we need a rough filter on the number of commits, e.g., single commit is helpless
