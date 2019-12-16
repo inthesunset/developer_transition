@@ -16,5 +16,5 @@ tail -n+2 author.time.react.angular.commits | python /home/yma28/developer_trans
 cat 10percentByMonth.react.angular | python3 /home/yma28/developer_transition/plotbyMonth.py
 # 8. study the ratio of angular and react for first half commits of one top 10 percent author
 cp author.time.react.angular.commits author.time.react.angular.commits.ENDING
-echo "ENDING" >> author.time.react.angular.commits.ENDING
+echo "ENDING;;0,0,0" >> author.time.react.angular.commits.ENDING
 cat author.time.react.angular.commits.ENDING | python /home/yma28/developer_transition/half_half_10percent.py 10percentauthors.react.angular > 10percent.half.half.moved
