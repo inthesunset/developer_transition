@@ -24,7 +24,7 @@ for line in sys.stdin:
         continue
     cmt_time = items[1]
     if author == current_author:
-        time2counts[time] = ','.join(items[2].split(',')[:2])
+        time2counts[cmt_time] = ','.join(items[2].split(',')[:2])
         continue
     else:
         # calculate the ratio, then get next author
