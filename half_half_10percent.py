@@ -17,12 +17,16 @@ with open(authors_file, 'r') as f:
 # in order to make it easy, I will add one "ending line" to stdin, i.e. author.time.react.angular.commits
 current_author = ""
 time2counts = {}
+start = True
 for line in sys.stdin:
     items = line.strip().split(';')
     author = items[0]
     if author not in authors:
         continue
     cmt_time = items[1]
+    if start:
+        current_author = author
+        start = False
     if author == current_author:
         time2counts[cmt_time] = ','.join(items[2].split(',')[:2])
         continue
