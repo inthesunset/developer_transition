@@ -40,7 +40,7 @@ for line in sys.stdin:
         angular_aft_counts = 0
         for t in timeRange:
             countR, countA = time2counts[t].split(',')[:2]
-            if int(t) < mid_time:
+            if int(t) <= mid_time:
                 react_pre_counts += int(countR)
                 angular_pre_counts += int(countA)
             else:
@@ -48,7 +48,7 @@ for line in sys.stdin:
                 angular_aft_counts += int(countA)
         pre_ratio = angular_pre_counts/float(angular_pre_counts + react_pre_counts)
         aft_ratio = angular_aft_counts/float(react_aft_counts + angular_aft_counts)
-        print(';'.join([author, str(pre_ratio), str(aft_ratio), str(pre_ratio > aft_ratio), str(pre_ratio/aft_ratio)]))
+        print(';'.join([author, str(pre_ratio), str(aft_ratio), str(pre_ratio > aft_ratio), str(pre_ratio/aft_ratio) if aft_ratio > 0 else 'INF']))
         # re-initiate
         current_author = author
         time2counts = {}
