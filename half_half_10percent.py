@@ -1,5 +1,5 @@
 # among top 10 percent authors,
-# 1. filter out non trials,
+# 1. filter out non trials, (how)
 # 2. calculate the ratio of angular for each half time span for each developer
 # 3. print the statistics
 #  read in 10percentauthors.react.angular as filter
@@ -48,7 +48,7 @@ for line in sys.stdin:
                 angular_aft_counts += int(countA)
         pre_ratio = angular_pre_counts/float(angular_pre_counts + react_pre_counts)
         aft_ratio = angular_aft_counts/float(react_aft_counts + angular_aft_counts)
-        print(';'.join([author, str(pre_ratio), str(aft_ratio), str(pre_ratio > aft_ratio)]))
+        print(';'.join([author, str(pre_ratio), str(aft_ratio), str(pre_ratio > aft_ratio), str(pre_ratio/aft_ratio)]))
         # re-initiate
         current_author = author
         time2counts = {}
